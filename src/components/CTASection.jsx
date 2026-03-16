@@ -16,13 +16,13 @@ const ctaSection = {
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/Images/cta-image.jpg",
+      image: "/images/cta-image.jpg",
       href: "#",
     },
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/Images/cta-image.jpg",
+      image: "/images/cta-image.jpg",
       href: "#",
     },
   ],
@@ -67,16 +67,27 @@ export default function CTASection() {
 
             <a
               href={ctaSection.button.href}
-              className="flex h-6 w-[158px] items-center justify-center gap-1 rounded-[26px] text-[#d46f5d]"
+              className="flex h-6 items-center gap-1 text-[#d46f5d]"
               style={{ fontFamily: "TTCommons", fontWeight: 450 }}
             >
-              <span className="text-[19px] leading-6">
-                {ctaSection.button.label}
-              </span>
-              <span aria-hidden="true" className="text-[19px] leading-6">
-                →
-              </span>
-            </a>
+            <span className="text-[19px] leading-6">
+              {ctaSection.button.label}
+            </span>
+
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#d46f5d"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="6" y1="12" x2="18" y2="12" />
+              <polyline points="12 6 18 12 12 18" />
+            </svg>
+          </a>
           </div>
 
           {/* image cards */}
@@ -85,14 +96,55 @@ export default function CTASection() {
               <a
                 key={`${card.title}-${index}`}
                 href={card.href}
-                className="block h-[515px] w-[644px] overflow-hidden rounded-[4px]"
+                className="relative block h-[515px] w-[644px] overflow-hidden rounded-[4px]"
               >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="h-full w-full object-cover"
-                />
-              </a>
+              <img
+                src={card.image}
+                alt={card.title}
+                className="h-full w-full object-cover"
+              />
+
+            {/* gradient */}
+          <div className="pointer-events-none absolute bottom-0 left-0 h-[257.5px] w-full bg-gradient-to-t from-[#141414]/80 to-transparent" />
+
+            {/* content */}
+          <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+
+          <div className="flex flex-col gap-2 text-white">
+            <h3
+            className="text-[28px] leading-[32px] tracking-[-0.02em]"
+            style={{ fontFamily: "TTCommons", fontWeight: 600 }}
+            >
+            {card.title}
+          </h3>
+
+          <p
+            className="text-[19px] leading-[24px] text-white/50"
+            style={{ fontFamily: "TTCommons", fontWeight: 450 }}
+          >
+          {card.description}
+          </p>
+          </div>
+
+          {/* arrow button */}
+          <div className="flex h-[56px] w-[56px] items-center justify-center rounded-[4px] border-2 border-white/30">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+                <line x1="6" y1="12" x2="18" y2="12" />
+              <polyline points="12 6 18 12 12 18" />
+            </svg>
+          </div>
+
+          </div>
+          </a>
             ))}
           </div>
 
