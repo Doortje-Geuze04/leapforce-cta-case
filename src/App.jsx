@@ -2,7 +2,7 @@ import CTASection from "./components/CTASection"
 
 function App() {
   return (
-    <main>
+    <main className="min-h-screen bg-white">
       <CTASection />
     </main>
   )
