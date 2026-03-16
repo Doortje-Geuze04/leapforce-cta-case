@@ -1,16 +1,66 @@
-# React + Vite
+# CTA Section – Two Blocks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project recreates the **CTA Section – Two Blocks** from the provided Figma design.  
+The goal of this assignment was to translate a design into a responsive and reusable component.
 
-Currently, two official plugins are available:
+The section contains:
+- A label
+- A title with mixed typography
+- Optional body text
+- An optional button with hover state
+- Two image CTA cards with gradient overlay, text and arrow button
+- Desktop and mobile layouts
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React / Next.js
+- Tailwind CSS
+- Figma for design reference
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Responsive layout (desktop and mobile)
+- Hover states for buttons and card arrows
+- Image gradient overlay for text readability
+- Reusable card structure using mapped data
+- Clean component structure
+
+The component is structured into two parts:
+- **CTASection** – main section layout and content
+- **CTACard** – reusable component for the image cards
+
+---
+
+## Running the project
+
+Install dependencies:
+    npm install
+
+Run the development server:
+    npm run dev
+
+Then open:
+    http://localhost:0000
+
+
+---
+
+## CMS considerations
+
+A `cms-fields.md` file is included in this repository describing the proposed CMS fields for this section.  
+This outlines how marketers could edit the content in a CMS environment such as HubSpot.
+
+---
+
+## Notes
+
+The design was implemented as closely as possible to the Figma file, including:
+- typography
+- spacing
+- hover states
+- responsive behavior
+
