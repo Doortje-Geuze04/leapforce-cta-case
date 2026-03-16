@@ -16,13 +16,13 @@ const ctaSection = {
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/images/cta-image.jpg",
+      image: "/Images/cta-image.jpg",
       href: "#",
     },
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/images/cta-image.jpg",
+      image: "/Images/cta-image.jpg",
       href: "#",
     },
   ],
@@ -30,9 +30,11 @@ const ctaSection = {
 
 export default function CTASection() {
   return (
-    <section className="w-full">
+    <section className="w-full bg-white">
       <div className="mx-auto w-[1440px] px-16 pt-16 pb-24">
         <div className="flex flex-col items-center gap-20">
+          
+          {/* bovenste intro */}
           <div className="flex h-[217px] w-[864px] flex-col items-center gap-6">
             <div className="flex h-[121px] w-[642px] flex-col items-center gap-2">
               <p
@@ -43,24 +45,21 @@ export default function CTASection() {
               </p>
 
               <h2 className="h-[97px] w-[642px] text-center text-[40px] leading-[48px] tracking-[-0.03em] text-[#1f1f1f]">
-              <span style={{ fontFamily: "TTCommons", fontWeight: 600 }}>
-                {ctaSection.titleStart}
-               </span>
-
-              <br />
-
-              <span style={{ fontFamily: "GTAlpina", fontWeight: 400 }}>
-                {ctaSection.titleAccent}
-              </span>
-
-              <span style={{ fontFamily: "TTCommons", fontWeight: 600 }}>
-              {" "} {ctaSection.titleEnd}
+                <span style={{ fontFamily: "TTCommons", fontWeight: 600 }}>
+                  {ctaSection.titleStart}
+                </span>
+                <br />
+                <span style={{ fontFamily: "GTAlpina", fontWeight: 400 }}>
+                  {ctaSection.titleAccent}
+                </span>
+                <span style={{ fontFamily: "TTCommons", fontWeight: 600 }}>
+                  {" "}{ctaSection.titleEnd}
                 </span>
               </h2>
             </div>
 
             <p
-              className="h-6 w-[864px] text-center text-[19px] leading-6 tracking-[0em] text-[#1f1f1f]/80"
+              className="h-6 w-[864px] text-center text-[19px] leading-6 text-[#1f1f1f]/80"
               style={{ fontFamily: "TTCommons", fontWeight: 450 }}
             >
               {ctaSection.body}
@@ -79,6 +78,24 @@ export default function CTASection() {
               </span>
             </a>
           </div>
+
+          {/* image cards */}
+          <div className="flex w-[1312px] gap-6">
+            {ctaSection.cards.map((card, index) => (
+              <a
+                key={`${card.title}-${index}`}
+                href={card.href}
+                className="block h-[515px] w-[644px] overflow-hidden rounded-[4px]"
+              >
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="h-full w-full object-cover"
+                />
+              </a>
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
