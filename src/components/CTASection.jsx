@@ -67,7 +67,7 @@ export default function CTASection() {
 
             <a
               href={ctaSection.button.href}
-              className="flex h-6 items-center gap-1 text-[#d46f5d]"
+              className="flex h-6 items-center gap-1 text-[#BF564D] hover:text-[#A6433A] transition-colors duration-200"
               style={{ fontFamily: "TTCommons", fontWeight: 450 }}
             >
             <span className="text-[19px] leading-6">
@@ -79,7 +79,7 @@ export default function CTASection() {
               height="16"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#d46f5d"
+              stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -127,7 +127,7 @@ export default function CTASection() {
           </div>
 
           {/* arrow button */}
-          <div className="flex h-[56px] w-[56px] items-center justify-center rounded-[4px] border-2 border-white/30">
+          <div className="flex h-[56px] w-[56px] items-center justify-center rounded-[4px] border-2 border-[#FFFFFF]/30 hover:border-[#FFFFFF]/50 transition-colors duration-200">
             <svg
               width="24"
               height="24"
