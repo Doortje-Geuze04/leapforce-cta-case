@@ -15,13 +15,13 @@ const ctaSection = {
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/images/cta-image.jpg",
+      image: `${import.meta.env.BASE_URL}/images/cta-image.jpg`,
       href: "#",
     },
     {
       title: "Title",
       description: "Supporting text about the call-to-action goes here.",
-      image: "/images/cta-image.jpg",
+      image: `${import.meta.env.BASE_URL}/images/cta-image.jpg`,
       href: "#",
     },
   ],

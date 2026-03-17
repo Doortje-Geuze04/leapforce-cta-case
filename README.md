@@ -1,66 +1,95 @@
 # CTA Section – Two Blocks
 
-This project recreates the **CTA Section – Two Blocks** from the provided Figma design.  
-The goal of this assignment was to translate a design into a responsive and reusable component.
+This project recreates the **CTA Section – Two Blocks** based on the provided Figma design.  
+The goal of this assignment was to translate a visual design into a **responsive, reusable and maintainable component**.
 
-The section contains:
-- A label
-- A title with mixed typography
-- Optional body text
-- An optional button with hover state
-- Two image CTA cards with gradient overlay, text and arrow button
-- Desktop and mobile layouts
+**Live demo**  
+https://doortje-geuze04.github.io/leapforce-cta-case/
 
 ---
 
-## Tech stack
+## Overview
 
-- React / Next.js
+The section includes:
+- Label
+- Title with mixed typography
+- Optional body text
+- Optional CTA button with hover state
+- Two image-based CTA cards with gradient overlay
+- Fully responsive layout (desktop & mobile)
+
+---
+
+## Tech Stack
+
+- React (Vite)
 - Tailwind CSS
-- Figma for design reference
+- Figma (design reference)
 
 ---
 
 ## Features
 
-- Responsive layout (desktop and mobile)
-- Hover states for buttons and card arrows
-- Image gradient overlay for text readability
-- Reusable card structure using mapped data
-- Clean component structure
+- Responsive layout (mobile & desktop)
+- Reusable component architecture
+- Hover interactions for buttons and card actions
+- Gradient overlay on images for readability
+- Data-driven rendering using mapped card data
 
-The component is structured into three parts:
-- **CTASection** – main section layout and composition
-- **CTAHeader** – header content with label, title, body text and button
-- **CTACard** – reusable component for the image cards
 ---
 
-## Running the project
+## Component Structure
+
+The implementation is split into clear, reusable components:
+
+- **CTASection**  
+  Main layout and composition of the section
+
+- **CTAHeader**  
+  Handles label, title, body text and CTA button
+
+- **CTACard**  
+  Reusable component for image cards
+
+---
+
+## Running the Project
 
 Install dependencies:
     npm install
 
-Run the development server:
+Start development server:
     npm run dev
 
 Then open:
-    http://localhost:0000
+    http://localhost:5000
 
+## Deployment
 
----
+The project is deployed using GitHub Pages.
+A production build is created using:
 
-## CMS considerations
+```bash 
+npm run build
+npm run deploy
+```
 
-A `cms-fields.md` file is included in this repository describing the proposed CMS fields for this section.  
-This outlines how marketers could edit the content in a CMS environment such as HubSpot.
+## CMS Considerations
 
----
+A cms-fields.md file is included in this repository describing the proposed CMS structure.
+This outlines how content editors (e.g. marketers) can manage:
+* Text fields
+* CTA button
+* Card content (title, description, image, link)
+* Designed with flexibility and scalability in mind.
 
 ## Notes
 
-The design was implemented as closely as possible to the Figma file, including:
-- typography
-- spacing
-- hover states
-- responsive behavior
+The implementation closely follows the Figma design, including:
+* Typography
+* Spacing and layout
+* Visual hierarchy
+* Hover interactions
+* Responsive behavior
 
+Focus was placed on clean structure, reusability and maintainability.
