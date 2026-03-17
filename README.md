@@ -29,10 +29,10 @@ The section contains:
 - Reusable card structure using mapped data
 - Clean component structure
 
-The component is structured into two parts:
-- **CTASection** – main section layout and content
+The component is structured into three parts:
+- **CTASection** – main section layout and composition
+- **CTAHeader** – header content with label, title, body text and button
 - **CTACard** – reusable component for the image cards
-
 ---
 
 ## Running the project
