@@ -1,15 +1,68 @@
+const headerWrapperClass = `
+  flex w-full max-w-[864px] flex-col items-center
+  gap-4 md:gap-5 lg:gap-6
+`
+
+const titleGroupClass = `
+  flex w-full max-w-[335px] flex-col items-center gap-2
+  md:max-w-[642px]
+`
+
+const labelClass = `
+  w-full text-center
+  text-[12px] leading-[14px]
+  tracking-[0.02em] text-[#1f1f1f]
+  md:text-[13px] md:leading-[15px]
+  lg:text-[15px] lg:leading-4
+`
+
+const titleClass = `
+  w-full text-center
+  text-[28px] leading-[38px]
+  tracking-[-0.03em] text-[#1f1f1f]
+  md:max-w-[642px]
+  md:text-[32px] md:leading-[38px]
+  lg:text-[40px] lg:leading-[48px]
+`
+
+const bodyClass = `
+  w-full max-w-[864px] text-center
+  text-[14px] leading-[20px] text-[#1E2526]
+  md:text-[16px] md:leading-[22px]
+  lg:text-[19px] lg:leading-6
+`
+
+const buttonClass = `
+  flex items-center gap-1 leading-none
+  text-[#BF564D]
+  transition-colors duration-200
+  hover:text-[#A6433A]
+`
+
+const buttonTextClass = `
+  text-[14px] leading-[18px]
+  md:text-[17px] md:leading-6
+  lg:text-[19px] lg:leading-6
+`
+
+const buttonIconClass = `
+  mt-[1px]
+  h-[14px] w-[14px]
+  md:h-4 md:w-4
+`
+
 export default function CTAHeader({ section }) {
   return (
-    <div className="flex w-full max-w-[864px] flex-col items-center gap-4 md:gap-5 lg:gap-6">
-      <div className="flex w-full max-w-[335px] flex-col items-center gap-2 md:max-w-[642px]">
+    <div className={headerWrapperClass}>
+      <div className={titleGroupClass}>
         <p
-          className="w-full text-center text-[12px] leading-[14px] tracking-[0.02em] text-[#1f1f1f] md:text-[13px] md:leading-[15px] lg:text-[15px] lg:leading-4"
+          className={labelClass}
           style={{ fontFamily: "TTCommons", fontWeight: 450 }}
         >
           {section.label}
         </p>
 
-        <h2 className="w-full text-center text-[28px] leading-[38px] tracking-[-0.03em] text-[#1f1f1f] md:max-w-[642px] md:text-[32px] md:leading-[38px] lg:text-[40px] lg:leading-[48px]">
+        <h2 className={titleClass}>
           <span className="md:hidden">
             <span style={{ fontFamily: "TTCommons", fontWeight: 600 }}>
               Mandatory title
@@ -46,7 +99,7 @@ export default function CTAHeader({ section }) {
       </div>
 
       <p
-        className="w-full max-w-[864px] text-center text-[14px] leading-[20px] text-[#1E2526] md:text-[16px] md:leading-[22px] lg:text-[19px] lg:leading-6"
+        className={bodyClass}
         style={{ fontFamily: "TTCommons", fontWeight: 450 }}
       >
         {section.body}
@@ -54,15 +107,15 @@ export default function CTAHeader({ section }) {
 
       <a
         href={section.button.href}
-        className="flex items-center gap-1 leading-none text-[#BF564D] hover:text-[#A6433A] transition-colors duration-200"
+        className={buttonClass}
         style={{ fontFamily: "TTCommons", fontWeight: 450 }}
       >
-        <span className="text-[14px] leading-[18px] md:text-[17px] md:leading-6 lg:text-[19px] lg:leading-6">
+        <span className={buttonTextClass}>
           {section.button.label}
         </span>
 
         <svg
-          className="mt-[1px] h-[14px] w-[14px] md:h-4 md:w-4"
+          className={buttonIconClass}
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

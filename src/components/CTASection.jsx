@@ -27,16 +27,46 @@ const ctaSection = {
   ],
 }
 
+const sectionClass = `
+  w-full bg-white
+`
+
+const containerClass = `
+  mx-auto w-full max-w-[1440px]
+
+  px-5
+  pt-12 pb-16
+
+  md:px-8
+  md:pt-12 md:pb-16
+
+  lg:px-16
+  lg:pt-16 lg:pb-24
+`
+
+const layoutClass = `
+  flex flex-col items-center
+  gap-8
+  md:gap-14
+  lg:gap-20
+`
+
+const cardsGridClass = `
+  grid w-full max-w-[1312px]
+  grid-cols-1 gap-4
+  md:grid-cols-2 md:gap-6
+`
+
 export default function CTASection() {
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto w-full max-w-[1440px] px-5 pt-12 pb-16 md:px-8 md:pt-12 md:pb-16 lg:px-16 lg:pt-16 lg:pb-24">
-        <div className="flex flex-col items-center gap-8 md:gap-14 lg:gap-20">
+    <section className={sectionClass}>
+      <div className={containerClass}>
+        <div className={layoutClass}>
           <CTAHeader section={ctaSection} />
 
-          <div className="grid w-full max-w-[1312px] grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          <div className={cardsGridClass}>
             {ctaSection.cards.map((card, index) => (
-              <CTACard key={`${card.title}-${index}`} card={card} index={index} />
+              <CTACard key={`${card.title}-${index}`} card={card} />
             ))}
           </div>
         </div>
